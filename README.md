@@ -15,23 +15,47 @@
 # 📁 项目结构
 ```bash
 helloagents-deepresearch/
-├── .vscode/
-│   └── settings.json     # 编辑器配置文件
-├── backend/
-│   ├── agent.py          # 智能体核心逻辑
-│   ├── main.py           # 项目入口
-│   ├── tools.py          # 工具函数
-│   ├── prompts.py        # 提示词模板
-│   ├── config.py         # 配置文件
-│   └── requirements.txt  # 依赖清单
-├── frontend/
+├── .vscode/              # 编辑器配置
+│   └── settings.json
+├── backend/              # 后端主目录
+│   ├── src/              # 后端源码
+│   │   ├── services/     # 业务服务模块
+│   │   │   ├── __init__.py
+│   │   │   ├── notes.py
+│   │   │   ├── planner.py
+│   │   │   ├── reporter.py
+│   │   │   ├── search.py
+│   │   │   ├── summarizer.py
+│   │   │   ├── text_processing.py
+│   │   │   └── tool_events.py
+│   │   ├── __init__.py
+│   │   ├── agent.py      # AI 智能体核心
+│   │   ├── config.py     # 配置文件
+│   │   ├── main.py       # 程序入口
+│   │   ├── models.py     # 数据模型
+│   │   ├── prompts.py    # 提示词模板
+│   │   └── utils.py      # 工具函数
+│   ├── .env              # 环境变量
+│   ├── requirements.txt  # 后端依赖
+│   ├── pyproject.toml    # 项目配置
+│   └── uv.lock           # 依赖锁
+├── frontend/             # 前端主目录
 │   ├── src/              # 前端源码
-│   ├── assets/           # 静态资源
+│   │   ├── services/
+│   │   │   └── api.ts    # 接口请求
+│   │   ├── App.vue
+│   │   ├── env.d.ts
+│   │   ├── main.ts
+│   │   └── style.css
+│   ├── .env.local        # 前端环境变量
+│   ├── .gitignore
 │   ├── index.html        # 页面入口
-│   └── package.json      # 前端依赖
-├── .env                  # 环境变量
-├── .gitignore            # Git 忽略文件
-└── README.md             # 项目说明
+│   ├── package-lock.json
+│   ├── package.json      # 前端依赖配置
+│   ├── tsconfig.json     # TS 配置
+│   ├── tsconfig.node.json
+│   └── vite.config.ts    # 构建配置
+└── README.md             # 项目说明文档
 ```
 
 # 🚀 安装与使用
@@ -48,13 +72,20 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
-## 3. 安装依赖
+## 3. 后端安装依赖
 ```bash
 运行
 pip install -r requirements.txt
 ```
 
-## 4. 配置 API Key
+## 4. 前端安装依赖
+```bash
+运行
+cd frontend
+npm install
+```
+
+## 5. 配置 API Key
 ```bash
 env
 LLM_API_KEY=你的API密钥
@@ -63,11 +94,12 @@ LLM_MODEL_NAME=deepseek-chat
 TAVILY_API_KEY=你的搜索密钥
 ```
 
-## 5. 运行项目
+## 6. 运行项目
 ```bash
 运行
 python backend/main.py
 ```
+
 
 📌 使用说明  
 运行后输入你想研究的主题，AI 会自动：  
