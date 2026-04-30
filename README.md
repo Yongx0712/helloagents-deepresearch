@@ -13,8 +13,24 @@
 - 🛠️ 模块化设计，易于扩展
 
 # 📁 项目结构
-helloagents-deepresearch/├── .vscode├── backend├── frontend└── README.md
-plaintext
+helloagents-deepresearch/
+├── .vscode/
+│   └── 编辑器配置文件
+├── backend/
+│   ├── agent.py          # 智能体核心逻辑
+│   ├── main.py           # 项目入口
+│   ├── tools.py          # 工具函数
+│   ├── prompts.py        # 提示词模板
+│   ├── config.py         # 配置文件
+│   └── requirements.txt  # 依赖清单
+├── frontend/
+│   ├── src/              # 前端源码
+│   ├── assets/           # 静态资源
+│   ├── index.html        # 页面入口
+│   └── package.json      # 前端依赖
+├── .env                  # 环境变量
+├── .gitignore            # Git 忽略文件
+└── README.md             # 项目说明
 
 # 🚀 安装与使用
 
