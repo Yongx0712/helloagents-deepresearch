@@ -16,7 +16,7 @@
 ```bash
 helloagents-deepresearch/
 ├── .vscode/
-│   └── settings.json
+│   └── settings.json     #编辑器配置文件
 ├── backend/
 │   ├── agent.py          # 智能体核心逻辑
 │   ├── main.py           # 项目入口
