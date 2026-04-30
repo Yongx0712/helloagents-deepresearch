@@ -13,6 +13,7 @@
 - 🛠️ 模块化设计，易于扩展
 
 # 📁 项目结构
+```bash
 helloagents-deepresearch/
 ├── .vscode/
 │   └── 编辑器配置文件
@@ -31,6 +32,7 @@ helloagents-deepresearch/
 ├── .env                  # 环境变量
 ├── .gitignore            # Git 忽略文件
 └── README.md             # 项目说明
+```
 
 # 🚀 安装与使用
 
